@@ -364,3 +364,26 @@ html{scrollbar-color:var(--scroll-thumb) var(--scroll-track);scrollbar-width:thi
 .compact-score{transform:scale(1.04);transform-origin:center}.compact-score button.selected{box-shadow:0 0 0 2px rgba(228,54,76,.2),0 0 12px rgba(228,54,76,.24),inset 0 1px #f07786}.compact-score>b{font-size:27px}
 @media(max-width:1180px){.nameplate{min-width:125px;max-width:170px;padding-left:22px;padding-right:18px}.nameplate-right{padding-left:18px;padding-right:22px}.match-state img{width:30px!important;height:30px!important}.match-art-corner{width:38px;height:38px}}
 @media(max-width:760px){.nameplate{min-width:105px;max-width:145px;min-height:36px;font-size:13px!important}.nameplate.team-double{max-width:160px;font-size:12px!important}.match-state img{width:27px!important;height:27px!important}.match-kind img{width:30px;height:30px}.match-art-corner{width:32px;height:32px}.compact-score{transform:none}}
+
+
+/* V6.6.6: responsive Match-Namensplaketten fuer Einzel + Doppel */
+.compact-match-main{display:grid;grid-template-columns:minmax(180px,1fr) auto minmax(180px,1fr) auto;align-items:center;column-gap:18px;row-gap:8px}
+.nameplate{--plate-accent:#596168;position:relative!important;display:flex!important;align-items:center;justify-content:flex-start;box-sizing:border-box;width:clamp(150px,19vw,260px);max-width:100%;min-height:44px;padding:7px 26px!important;margin:0!important;border:1px solid #697278;border-radius:8px 5px 5px 8px;background:linear-gradient(180deg,#293136 0%,#151b1f 22%,#0b0f12 78%,#20272c 100%);box-shadow:inset 0 0 0 2px #090c0e,inset 0 8px 16px rgba(255,255,255,.025),0 3px 7px #000;overflow:visible!important;text-overflow:ellipsis;white-space:nowrap;color:#fff}
+.nameplate:before{content:""!important;position:absolute;inset:0!important;z-index:0!important;transform:none!important;background:none!important;filter:none!important;pointer-events:none;border-radius:inherit;box-shadow:inset 0 -3px 0 var(--plate-accent),inset 0 -5px 0 rgba(210,35,55,.42)}
+.nameplate:after{content:""!important;position:absolute!important;left:-13px!important;right:auto!important;top:50%!important;bottom:auto!important;width:28px!important;height:28px!important;transform:translateY(-50%) rotate(45deg)!important;border:2px solid #7c858b;border-radius:5px;background:linear-gradient(135deg,#343c41,#0c1013);box-shadow:inset 0 0 0 5px #14191d,0 2px 4px #000!important;z-index:0!important}
+.nameplate-right{justify-content:flex-end!important;text-align:right;border-radius:5px 8px 8px 5px}.nameplate-right:after{left:auto!important;right:-13px!important}
+.nameplate.team-double{width:clamp(200px,23vw,315px);min-height:48px;padding-left:30px!important;padding-right:30px!important;background:linear-gradient(180deg,#2b3338,#11171a 34%,#090d10 76%,#22292e)}
+.nameplate.team-double:after{width:32px!important;height:32px!important}
+.nameplate.rank-iron{--plate-accent:#596168}.nameplate.rank-steel{--plate-accent:#89949a}.nameplate.rank-bronze{--plate-accent:#a96a3b}.nameplate.rank-silver{--plate-accent:#c7cdd1}.nameplate.rank-gold{--plate-accent:#d9a83a}.nameplate.rank-platinum{--plate-accent:#eef4f5}.nameplate.rank-legend{--plate-accent:#ffd057}
+/* echte kleine Metallkappe im Rautenende */
+.nameplate>span{position:relative;z-index:2}
+.compact-score{justify-self:center;margin:0!important}
+.compact-actions{justify-self:end}
+/* Doppel bekommt mehr Luft, Einzel bleibt kompakter */
+.match-card.compact-match .team-name{line-height:1.15}
+.match-card.compact-match .team-double{font-size:14px!important}
+/* Badges links/rechts bewusst angleichen */
+.match-kind img{width:38px!important;height:38px!important}.match-state img{width:36px!important;height:36px!important}
+@media(max-width:1350px){.compact-match-main{grid-template-columns:minmax(150px,1fr) auto minmax(150px,1fr);column-gap:12px}.compact-actions{grid-column:1/-1;justify-self:end}.nameplate{width:clamp(145px,20vw,220px)}.nameplate.team-double{width:clamp(185px,26vw,270px)}}
+@media(max-width:900px){.compact-match-main{grid-template-columns:1fr auto 1fr}.nameplate{width:100%;min-width:120px;padding-left:20px!important;padding-right:20px!important}.nameplate.team-double{width:100%;min-width:150px}.compact-score{transform:none}.compact-actions{grid-column:1/-1}.nameplate:after{width:24px!important;height:24px!important;left:-10px!important}.nameplate-right:after{left:auto!important;right:-10px!important}}
+@media(max-width:650px){.compact-match-main{grid-template-columns:1fr 1fr;gap:10px}.nameplate{grid-row:1}.compact-score{grid-column:1/-1;grid-row:2}.compact-actions{grid-row:3}.nameplate:after{display:none}.nameplate{border-radius:7px!important}.nameplate.team-double{min-height:46px}}
