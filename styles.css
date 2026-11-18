@@ -423,3 +423,23 @@ html{scrollbar-color:var(--scroll-thumb) var(--scroll-track);scrollbar-width:thi
 .nameplate.rank-iron{--plate-accent:#626a70}.nameplate.rank-steel{--plate-accent:#929da3}.nameplate.rank-bronze{--plate-accent:#b17243}.nameplate.rank-silver{--plate-accent:#d0d5d8}.nameplate.rank-gold{--plate-accent:#dfa93a}.nameplate.rank-platinum{--plate-accent:#f2f6f7}.nameplate.rank-legend{--plate-accent:#ffd45d}
 @media(max-width:900px){.nameplate,.nameplate.team-double{max-width:250px!important}.name-art{width:30px;height:30px;flex-basis:30px}.nameplate.team-double .name-art{width:34px;height:34px;flex-basis:34px}}
 @media(max-width:650px){.nameplate,.nameplate.team-double{max-width:100%!important}.name-art{width:27px;height:27px;flex-basis:27px}.nameplate.team-double .name-art{width:30px;height:30px;flex-basis:30px}.nameplate>b{overflow:hidden;text-overflow:ellipsis}}
+
+
+/* V6.6.10: nur ein aeusseres Corner-Artwork pro Name */
+.nameplate,.nameplate.team-double{display:inline-flex!important;align-items:center!important;gap:5px!important;width:max-content!important;min-width:0!important;max-width:min(350px,100%)!important;background:none!important;background-image:none!important;border:0!important;box-shadow:none!important;padding:0!important;overflow:visible!important}
+.nameplate:before,.nameplate:after{display:none!important}
+.nameplate>b{display:block!important;padding:5px 3px 5px!important;border:0!important;border-bottom:2px solid var(--plate-accent)!important;box-shadow:0 2px 0 rgba(202,35,53,.22)!important;line-height:1.1!important;white-space:nowrap!important}
+.name-art{display:block!important;flex:0 0 26px!important;width:26px!important;height:26px!important;background:url('assets/match-ui/match-corner.png') center/contain no-repeat!important;filter:drop-shadow(0 2px 2px #000)!important;margin:0!important}
+/* links: nur die aeussere linke Ecke */
+.nameplate-left .name-art.left{display:block!important;transform:none!important}
+.nameplate-left .name-art.right{display:none!important}
+/* rechts: nur die aeussere rechte Ecke */
+.nameplate-right .name-art.left{display:none!important}
+.nameplate-right .name-art.right{display:block!important;transform:rotate(180deg)!important}
+/* Doppel nur minimal groesser, niemals gestreckt */
+.nameplate.team-double .name-art{flex-basis:29px!important;width:29px!important;height:29px!important}
+.nameplate.team-double>b{padding-left:4px!important;padding-right:4px!important}
+/* gemeinsame Achse Name - Score - Name */
+.compact-match-main{align-items:center!important}.nameplate-left{justify-self:start!important}.nameplate-right{justify-self:end!important}.compact-score{align-self:center!important}
+@media(max-width:900px){.name-art{flex-basis:24px!important;width:24px!important;height:24px!important}.nameplate.team-double .name-art{flex-basis:27px!important;width:27px!important;height:27px!important}.nameplate,.nameplate.team-double{max-width:250px!important}}
+@media(max-width:650px){.name-art{flex-basis:22px!important;width:22px!important;height:22px!important}.nameplate.team-double .name-art{flex-basis:24px!important;width:24px!important;height:24px!important}.nameplate>b{overflow:hidden!important;text-overflow:ellipsis!important}}
