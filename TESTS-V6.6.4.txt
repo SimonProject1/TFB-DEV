@@ -1,0 +1,1 @@
+V6.6.4: JavaScript, Service Worker, Ergebnislogik, 12 neue lokale Artworks und ZIP-Integritaet geprueft.
