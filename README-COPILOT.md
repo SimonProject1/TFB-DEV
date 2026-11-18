@@ -20,7 +20,7 @@ Die produktive App soll:
 
 ## 2. Aktueller verbindlicher Stand
 
-- Produktive Web-App-Version: **V6.6.10**
+- Produktive Web-App-Version: **V6.6.11**
 - Letzte Aenderung: optimierte Ergebniseingabe plus Offline-Cache
 - Service-Worker-Cache: **tfb-2011-v6.6.3**
 - PWA-Startpfad: **./index.html**
@@ -52,7 +52,7 @@ Entwicklungsprotokolle wie `TESTS-V*.txt`, alte `README*.txt` und `OFFLINE-ASSET
 
 ## 4. Offlinebetrieb
 
-V6.6.10 verwendet einen Service Worker. Der Service Worker cached:
+V6.6.11 verwendet einen Service Worker. Der Service Worker cached:
 
 - `index.html`
 - `app.js`
@@ -92,7 +92,7 @@ Zusaetzliche lokale GET-Assets werden beim ersten erfolgreichen Laden ebenfalls 
 
 Eine reine Offline-Anzeige reicht nicht. Lesen, Schreiben, Speichern und erneutes Laden muessen offline funktionieren.
 
-## 5. Ergebniseingabe V6.6.10
+## 5. Ergebniseingabe V6.6.11
 
 Die Auswahl ist bewusst spiegelbildlich angeordnet:
 
@@ -223,7 +223,7 @@ Hinweis: Die Passwoerter liegen in der clientseitigen Anwendung und sind daher k
 Web-App:
 
 - aktuelle Linie: V6.x
-- kleine Fehlerkorrektur: Patch-Version erhoehen, zum Beispiel V6.6.10 auf V6.6.10
+- kleine Fehlerkorrektur: Patch-Version erhoehen, zum Beispiel V6.6.11 auf V6.6.11
 - groesserer abgeschlossener Funktionsblock: Minor-Version erhoehen
 - niemals eine neue Versionsnummer vergeben, wenn die Aenderung noch nicht umgesetzt und geprueft wurde
 
@@ -268,7 +268,7 @@ GitHub allein ersetzt kein Backup von LocalStorage oder anderen lokal gespeicher
 ## 15. Starttext fuer einen neuen Copilot-Chat
 
 ```text
-Wir entwickeln die TFB 2011 Liga Web-App weiter. Bitte lies zuerst die Datei README-COPILOT.md aus dem GitHub-Hauptverzeichnis und behandle sie als verbindliche Projektuebergabe. Der aktuelle produktive Stand ist V6.6.10. Aendere nichts an der Datenstruktur, dem Offline-Service-Worker oder den produktiven Assets, ohne die Auswirkungen auf bestehende Liga-Daten, Backups und Offlinebetrieb zu pruefen. Erstelle neue Versionen erst nach Umsetzung und Tests. Produktive GitHub-Dateien und Entwicklungs-/Testdateien muessen getrennt bleiben.
+Wir entwickeln die TFB 2011 Liga Web-App weiter. Bitte lies zuerst die Datei README-COPILOT.md aus dem GitHub-Hauptverzeichnis und behandle sie als verbindliche Projektuebergabe. Der aktuelle produktive Stand ist V6.6.11. Aendere nichts an der Datenstruktur, dem Offline-Service-Worker oder den produktiven Assets, ohne die Auswirkungen auf bestehende Liga-Daten, Backups und Offlinebetrieb zu pruefen. Erstelle neue Versionen erst nach Umsetzung und Tests. Produktive GitHub-Dateien und Entwicklungs-/Testdateien muessen getrennt bleiben.
 ```
 
 ## 16. Checkliste vor jeder neuen Auslieferung
@@ -287,17 +287,17 @@ Wir entwickeln die TFB 2011 Liga Web-App weiter. Bitte lies zuerst die Datei REA
 - GitHub-Paket enthaelt nur Produktivdateien plus `README-COPILOT.md`
 
 
-## V6.6.10 Matchday Design
+## V6.6.11 Matchday Design
 - Spielekarten verwenden lokale Gunmetal-Artworks unter assets/match-ui/.
 - Ergebniseingabe V6.6.3 bleibt erhalten.
 - Service Worker cached Matchday- und Settings-Artworks fuer Offlinebetrieb.
 - Settings-Artworks liegen vorbereitet unter assets/settings-ui/ und koennen in Folgeversionen schrittweise eingebunden werden.
 
 
-## WICHTIG: Status V6.6.10
-**V6.6.10 ist aktuell noch NICHT offiziell freigegeben.** Diese Version ist ein Teststand fuer das DEV-Repository. Erst nach Simons ausdruecklicher Abnahme darf V6.6.10 als produktiver Stable-Stand behandelt werden.
+## WICHTIG: Status V6.6.11
+**V6.6.11 ist aktuell noch NICHT offiziell freigegeben.** Diese Version ist ein Teststand fuer das DEV-Repository. Erst nach Simons ausdruecklicher Abnahme darf V6.6.11 als produktiver Stable-Stand behandelt werden.
 
-Aenderungen V6.6.10:
+Aenderungen V6.6.11:
 - Status-Artworks rechts vergroessert und optisch an das linke Einzel-/Doppel-Artwork angeglichen.
 - Spielernamen liegen auf modularen Gunmetal-Namensplaketten.
 - linke/rechte Namensplaketten sind gespiegelt.
@@ -309,8 +309,8 @@ Aenderungen V6.6.10:
 - neue Artworks sind im Offline-Service-Worker gecacht.
 
 
-## WICHTIG: Status V6.6.10
-**V6.6.10 ist aktuell noch NICHT offiziell freigegeben.** Diese Version ist fuer das DEV-Repository vorgesehen.
+## WICHTIG: Status V6.6.11
+**V6.6.11 ist aktuell noch NICHT offiziell freigegeben.** Diese Version ist fuer das DEV-Repository vorgesehen.
 
 Korrektur gegenueber V6.6.5:
 - Einzel und Doppel anhand des Screenshots gemeinsam abgestimmt.
@@ -320,13 +320,13 @@ Korrektur gegenueber V6.6.5:
 - Doppel erhaelt eine breitere Plakette mit mehr Platz fuer zwei Namen.
 - Scoreboard und Namen werden auf einer gemeinsamen Achse ausgerichtet.
 - Status-Artwork rechts und Disziplin-Artwork links sind nahezu gleich gewichtet.
-- Offline-Cache wurde auf V6.6.10 angehoben.
+- Offline-Cache wurde auf V6.6.11 angehoben.
 
 
-## WICHTIG: Status V6.6.10
-**V6.6.10 ist aktuell noch NICHT offiziell freigegeben.** DEV-Teststand.
+## WICHTIG: Status V6.6.11
+**V6.6.11 ist aktuell noch NICHT offiziell freigegeben.** DEV-Teststand.
 
-Namensdarstellung V6.6.10:
+Namensdarstellung V6.6.11:
 - keine vollflaechige oder gestreckte Namensplakette mehr.
 - links und rechts des Namens stehen nur eckige Gunmetal-Klammern.
 - Abstand der beiden Klammern richtet sich automatisch nach der tatsaechlichen Textlaenge.
@@ -335,8 +335,8 @@ Namensdarstellung V6.6.10:
 - bestehender Matchday-, Ergebnis- und Offline-Stand bleibt erhalten.
 
 
-## WICHTIG: Status V6.6.10
-**V6.6.10 ist aktuell noch NICHT offiziell freigegeben.** DEV-Teststand.
+## WICHTIG: Status V6.6.11
+**V6.6.11 ist aktuell noch NICHT offiziell freigegeben.** DEV-Teststand.
 
 Aenderung:
 - die beiden match-corner-Artworks wurden von den aeusseren Begegnungsecken entfernt.
@@ -349,8 +349,8 @@ Aenderung:
 - Ergebnis-, Status- und Offline-Logik bleiben unveraendert.
 
 
-## WICHTIG: Status V6.6.10
-**V6.6.10 ist aktuell noch NICHT offiziell freigegeben.** DEV-Teststand.
+## WICHTIG: Status V6.6.11
+**V6.6.11 ist aktuell noch NICHT offiziell freigegeben.** DEV-Teststand.
 
 Namensdarstellung:
 - pro Spieler/Team nur noch ein Match-Corner-Artwork.
@@ -360,3 +360,19 @@ Namensdarstellung:
 - keine Box und kein Hintergrund hinter dem Namen.
 - dezente Rangkante nur direkt unter dem Text.
 - Scoreboard und restlicher Matchday bleiben unveraendert.
+
+
+## WICHTIG: Status V6.6.11
+**V6.6.11 ist noch NICHT offiziell freigegeben.** Diese Version basiert direkt auf V6.6.10 und ist fuer das DEV-Repository vorgesehen.
+
+Aenderungen gegenueber V6.6.10:
+- vorhandene Match-Logik und alle bis V6.6.10 erreichten Korrekturen bleiben erhalten.
+- Status-Artwork rechts auf 34 px vergroessert; Disziplin-Artwork links 38 px.
+- Spielernamen liegen jetzt in echten responsiven Gunmetal-Plaketten.
+- Plakettenmitte ist CSS-basiert und wird nicht verzerrt.
+- separate End-Cap-Artworks links/rechts, jeweils unverzerrt.
+- Rangfarbe erscheint nur als dezente untere Metallkante.
+- Doppelplakette bietet mehr Platz fuer zwei Namen.
+- Name, Scoreboard und Gegenname liegen auf einer gemeinsamen Achse.
+- Ergebnisautomatik aus V6.6.10 bleibt unveraendert.
+- Offline-Cache auf tfb-2011-v6.6.11 aktualisiert und um beide End-Cap-Artworks erweitert.

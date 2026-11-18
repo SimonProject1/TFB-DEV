@@ -443,3 +443,31 @@ html{scrollbar-color:var(--scroll-thumb) var(--scroll-track);scrollbar-width:thi
 .compact-match-main{align-items:center!important}.nameplate-left{justify-self:start!important}.nameplate-right{justify-self:end!important}.compact-score{align-self:center!important}
 @media(max-width:900px){.name-art{flex-basis:24px!important;width:24px!important;height:24px!important}.nameplate.team-double .name-art{flex-basis:27px!important;width:27px!important;height:27px!important}.nameplate,.nameplate.team-double{max-width:250px!important}}
 @media(max-width:650px){.name-art{flex-basis:22px!important;width:22px!important;height:22px!important}.nameplate.team-double .name-art{flex-basis:24px!important;width:24px!important;height:24px!important}.nameplate>b{overflow:hidden!important;text-overflow:ellipsis!important}}
+
+
+/* V6.6.11: responsive Gunmetal-Namensplaketten auf Basis V6.6.10 */
+/* Status rechts bewusst naeher an das Gewicht des Disziplin-Artworks links bringen */
+.match-state img{width:34px!important;height:34px!important;max-width:34px!important;max-height:34px!important;object-fit:contain!important;filter:drop-shadow(0 2px 3px #000)}
+.match-kind img{width:38px!important;height:38px!important;object-fit:contain!important}
+/* flexible Mitte: keine skalierte Komplett-PNG */
+.nameplate,.nameplate.team-double{--plate-accent:#626a70;position:relative!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:0!important;width:max-content!important;min-width:150px!important;max-width:min(290px,100%)!important;min-height:42px!important;padding:0 20px!important;overflow:visible!important;isolation:isolate;background:linear-gradient(180deg,#293136 0%,#151b1f 48%,#0a0e11 100%)!important;background-image:none!important;border:1px solid #4f5a61!important;border-bottom:3px solid var(--plate-accent)!important;border-radius:4px!important;box-shadow:inset 0 0 0 1px #090c0e,inset 0 -7px 12px #000,0 4px 7px rgba(0,0,0,.48)!important}
+.nameplate:before,.nameplate:after{display:none!important}
+.nameplate>b{display:block!important;min-width:0;padding:6px 8px!important;border:0!important;border-bottom:0!important;box-shadow:none!important;line-height:1.1!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;text-shadow:0 2px 3px #000}
+/* vorhandene name-art Elemente werden zu echten separaten End-Caps */
+.name-art{display:block!important;position:absolute!important;top:50%!important;width:48px!important;height:48px!important;flex:0 0 48px!important;margin:0!important;background-repeat:no-repeat!important;background-size:contain!important;background-position:center!important;filter:drop-shadow(0 3px 4px #000)!important;pointer-events:none!important;z-index:-1!important}
+.nameplate-left .name-art.left{display:block!important;left:-30px!important;right:auto!important;transform:translateY(-50%)!important;background-image:url('assets/match-ui/nameplate-cap-left.png')!important}
+.nameplate-left .name-art.right{display:none!important}
+.nameplate-right .name-art.left{display:none!important}
+.nameplate-right .name-art.right{display:block!important;right:-30px!important;left:auto!important;transform:translateY(-50%)!important;background-image:url('assets/match-ui/nameplate-cap-right.png')!important}
+.nameplate-left{margin-left:30px!important;justify-self:start!important;text-align:left!important}.nameplate-right{margin-right:30px!important;justify-self:end!important;text-align:right!important}
+/* Rang bleibt subtil als echte Unterkante */
+.nameplate.rank-iron{--plate-accent:#555d62}.nameplate.rank-steel{--plate-accent:#87939a}.nameplate.rank-bronze{--plate-accent:#a86637}.nameplate.rank-silver{--plate-accent:#c2c9cd}.nameplate.rank-gold{--plate-accent:#d5a435}.nameplate.rank-platinum{--plate-accent:#eef3f4}.nameplate.rank-legend{--plate-accent:#ffcb4c}
+/* Doppel bekommt mehr Raum, aber dieselben unverzerrten Caps */
+.nameplate.team-double{min-width:180px!important;max-width:min(330px,100%)!important;min-height:50px!important}.nameplate.team-double>b{white-space:normal!important;text-align:center!important}
+/* Name - Score - Name auf einer gemeinsamen Achse */
+.compact-match-main{display:grid!important;grid-template-columns:minmax(190px,1fr) auto minmax(190px,1fr) auto!important;align-items:center!important;column-gap:24px!important}.compact-score,.final-score{align-self:center!important;justify-self:center!important}
+/* Scoreboard nur leicht staerker, Ergebnislogik bleibt unveraendert */
+.compact-score{transform:scale(1.035);transform-origin:center}.compact-score button.selected{box-shadow:0 0 0 2px rgba(228,54,76,.2),0 0 12px rgba(228,54,76,.24),inset 0 1px #f07786!important}.compact-score>b{font-size:27px!important}
+@media(max-width:1180px){.nameplate,.nameplate.team-double{min-width:130px!important;max-width:210px!important;min-height:40px!important;padding:0 15px!important}.name-art{width:42px!important;height:42px!important}.nameplate-left .name-art.left{left:-26px!important}.nameplate-right .name-art.right{right:-26px!important}.nameplate-left{margin-left:26px!important}.nameplate-right{margin-right:26px!important}.compact-match-main{grid-template-columns:minmax(150px,1fr) auto minmax(150px,1fr) auto!important;column-gap:16px!important}.match-state img{width:30px!important;height:30px!important}}
+@media(max-width:900px){.compact-match-main{grid-template-columns:1fr auto 1fr!important}.compact-actions{grid-column:1/-1!important;justify-self:end!important}.nameplate,.nameplate.team-double{max-width:190px!important}}
+@media(max-width:650px){.compact-match-main{grid-template-columns:1fr!important;row-gap:10px!important}.nameplate-left,.nameplate-right,.compact-score,.final-score{justify-self:center!important}.nameplate-left,.nameplate-right{margin-left:27px!important;margin-right:27px!important}.nameplate,.nameplate.team-double{min-width:145px!important;max-width:230px!important}.name-art{width:40px!important;height:40px!important}.match-state img{width:27px!important;height:27px!important}.match-kind img{width:31px!important;height:31px!important}.compact-score{transform:none}.compact-actions{grid-column:1!important;justify-self:center!important}}
