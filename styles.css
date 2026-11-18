@@ -348,3 +348,19 @@ html{scrollbar-color:var(--scroll-thumb) var(--scroll-track);scrollbar-width:thi
 .match-card.done .final-score{padding:6px 15px;border:1px solid #59636a;border-radius:11px;background:#0a0e11;color:#f3f3f3;font-size:22px;box-shadow:inset 0 0 12px #000}
 .challenge-btn:before{content:"";display:inline-block;width:25px;height:25px;margin-right:7px;vertical-align:middle;background:url('assets/match-ui/status-challenge.png') center/contain no-repeat}.compact-confirm:before{content:"";display:inline-block;width:22px;height:22px;margin-right:6px;vertical-align:middle;background:url('assets/match-ui/status-confirmed.png') center/contain no-repeat}
 @media(max-width:760px){.match-kind img{width:28px;height:28px}.match-state img{width:22px;height:22px}.compact-score button{min-width:34px;height:36px}.match-meta{gap:6px}}
+
+
+/* V6.6.5 Matchday refinement - TESTSTAND, noch nicht offiziell */
+.match-state img{width:34px!important;height:34px!important;max-width:34px;max-height:34px;filter:drop-shadow(0 2px 3px #000)}
+.match-kind img{width:38px;height:38px}
+.match-art-corner{position:absolute;z-index:1;width:44px;height:44px;background:url('assets/match-ui/match-corner.png') center/contain no-repeat;pointer-events:none;opacity:.95}.match-art-corner.top-left{left:-2px;top:-2px}.match-art-corner.bottom-right{right:-2px;bottom:-2px;transform:rotate(180deg)}
+.compact-match-main{position:relative;z-index:2}
+.nameplate{--plate-accent:#596168;position:relative;display:flex!important;align-items:center;min-width:150px;max-width:220px;min-height:40px;padding:6px 24px 6px 28px;isolation:isolate;font-size:15px!important;font-weight:950!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 2px 3px #000}
+.nameplate:before{content:"";position:absolute;inset:0;z-index:-2;background:url('assets/match-ui/nameplate-player.png') center/100% 100% no-repeat;filter:drop-shadow(0 3px 4px #000)}
+.nameplate:after{content:"";position:absolute;left:18px;right:14px;bottom:5px;height:2px;z-index:-1;border-radius:2px;background:linear-gradient(90deg,var(--plate-accent),#e3364c 48%,var(--plate-accent));opacity:.85}
+.nameplate-right{justify-content:flex-end;text-align:right;padding:6px 28px 6px 24px}.nameplate-right:before{transform:scaleX(-1)}.nameplate-right:after{left:14px;right:18px}
+.nameplate.team-double:before{background-image:url('assets/match-ui/nameplate-team.png')}.nameplate.team-double{min-height:44px;max-width:250px;font-size:14px!important}
+.nameplate.rank-iron{--plate-accent:#555d62}.nameplate.rank-steel{--plate-accent:#87939a}.nameplate.rank-bronze{--plate-accent:#a86637}.nameplate.rank-silver{--plate-accent:#c2c9cd}.nameplate.rank-gold{--plate-accent:#d5a435}.nameplate.rank-platinum{--plate-accent:#eef3f4}.nameplate.rank-legend{--plate-accent:#ffcb4c}
+.compact-score{transform:scale(1.04);transform-origin:center}.compact-score button.selected{box-shadow:0 0 0 2px rgba(228,54,76,.2),0 0 12px rgba(228,54,76,.24),inset 0 1px #f07786}.compact-score>b{font-size:27px}
+@media(max-width:1180px){.nameplate{min-width:125px;max-width:170px;padding-left:22px;padding-right:18px}.nameplate-right{padding-left:18px;padding-right:22px}.match-state img{width:30px!important;height:30px!important}.match-art-corner{width:38px;height:38px}}
+@media(max-width:760px){.nameplate{min-width:105px;max-width:145px;min-height:36px;font-size:13px!important}.nameplate.team-double{max-width:160px;font-size:12px!important}.match-state img{width:27px!important;height:27px!important}.match-kind img{width:30px;height:30px}.match-art-corner{width:32px;height:32px}.compact-score{transform:none}}
